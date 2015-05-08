@@ -1,0 +1,93 @@
+nav
+	background: rgba($white, 0.9)
+	height: 60px
+	position: fixed
+	top: 0
+	transition: top 0.2s ease-in-out
+	width: 100%
+	text-align: center
+	z-index: 10
+
+	// @media screen and (max-width: 670px)
+	// 	white-space: nowrap
+
+	ul
+		margin-bottom: 0
+
+	li
+		display: inline-block
+		text-decoration: none
+		padding: 20px 0
+
+	a
+		margin: 0 20px
+		color: #ccc
+
+		&:hover
+			color: $light-gray
+
+.nav-up
+	top: -60px
+
+.logo
+	padding: 15px
+	margin: 0 10px
+	background: #000
+	color: #fff
+	font-size: 25px
+
+	a
+		margin: 0
+		color: $white
+
+
+#main
+	position: relative
+	text-align: center
+	padding: calc(100vh/3)
+	padding-left: 0
+	padding-right: 0
+
+	h1
+		font-weight: 300
+		line-height: 0.9em
+		text-align: center
+
+	p
+
+		color: $light-gray
+
+	.button
+		background: none
+		color: #000
+		border: 1px solid $light-gray
+		margin-top: 40px
+		padding: 10px 40px
+
+		p
+			margin: 0
+			text-transform: uppercase
+			font-weight: 400
+
+	.vertical-dots
+		display: block
+		width: 10px
+		height: 10px
+		border-radius: 50%
+		position: relative
+		background: lighten($dark, 60%)
+		margin: 0 auto
+		top: 300px
+
+		&:before, &:after
+			@extend .vertical-dots
+			content: ""
+			position: absolute
+
+		&:before
+			background: lighten($dark, 40%)
+			top: 1em
+
+		&:after
+			background: lighten($dark, 20%)
+			top: 2em
